@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        body {
+          font-family: sans-serif;
+          padding-left: 20%;
+          padding-right: 20%;
+        }
+        label {
+          font-size: 18px;
+          display: block;
+          padding-bottom: 10px;
+        }
+        input, textarea, select {
+          display: block;
+          width: 100%;
+          padding-bottom: 20px;
+        }
+  
+        form {
+          background-color: #CC0000;
+          padding: 40px 40px 40px 40px;
+        }
+  
+        #button-area {
+          float: left;
+          width: 50%;
+          height: 50%;
+        }
+  
+        input[type=checkbox]:not(old) + label,
+        input[type=radio   ]:not(old) + label {
+          display      : inline-block;
+          margin-left  : -28px;
+          padding-left : 28px;
+        }
+      </style>
+</head>
+<body>
+    <h1 id="title">Tell me about dance</h1>
+    <p id="description">This is a survey where you tell us about dance and how it inspires you</p>
+    <form id="survey-form">
+        <label id="name-label">Name</label>
+        Name:
+        <input type="text" name="name" id="name" required placeholder="Stage name"><br>
+
+        <label id="email-label">Email</label>
+        Email: 
+        <input type="email" name="name" id="email" required placeholder="official email"><br>
+
+        <label id="number-label">Number</label>
+        Number:
+        <input type="number" name="name" min="0" max="10" id="number" required placeholder="$"><br>
+
+
+
+        <select id="dropdown" name="dancers">
+          <option value="hip hop">Hip Hop</option>
+          <option value="trap">Trap</option>
+          <option value="salsa">Salsa</option>
+          <option value="dancehall">Dancehall</option>
+          <option value="others">Others</option>
+        </select>
+
+        <label id="additional-comments-label">Additional Comments:</label>
+        <textarea placeholder="Additional Comments"></textarea><br>
+  
+        <div id="button-area">
+          <label id="gender-label">Gender:</label>
+          <input type="radio" class="radio-inline" name="gender" value="male"> Male<br>
+          <input type="radio" class="radio-inline" name="gender" value="female"> Female<br>
+          <input type="radio" class="radio-inline" name="gender" value="other"> Other
+        </div>
+
+        <div id="button-area">
+          <label id="transportation-type-label">Dance Type:</label>
+          <input type="checkbox" name="vehicle1" value="Bike"> I do hip hop<br>
+          <input type="checkbox" name="vehicle2" value="Car"> I do trap and dancehall<br>
+          <input type="checkbox" name="vehicle3" value="Boat" checked> I do all<br>
+        </div>
+
+        <input type="submit" id="submit">
+    </form>
+    <script type="text/JavaScript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>   
+</body>
+</html>
